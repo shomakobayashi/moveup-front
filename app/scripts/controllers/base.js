@@ -7,6 +7,7 @@
  * # base
  * Controller of the base
  */
+
  angular.module('moveupApp')
    .controller('BaseCtrl', ['$scope', '$http','ApiService','$location', 'EVENTS', '$window' ,function ($scope, $http, apiService,$location,EVENTS,$window) {
        $scope.hasLogin = false;

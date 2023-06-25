@@ -135,6 +135,16 @@ angular
         controller: 'EventDetailCtrl',
         controllerAs: 'eventDetail',
       })
+      .when('/guide/:year/:page/', {
+        templateUrl: 'views/guide.html',
+        controller: 'GuideCtrl',
+        controllerAs: 'guide',
+      })
+      .when('/guideDetail/:uuid/', {
+        templateUrl: 'views/guideDetail.html',
+        controller: 'GuideDetailCtrl',
+        controllerAs: 'guideDetail',
+      })
       .when('/news/:type/:page/', {
         templateUrl: 'views/news.html',
         controller: 'NewsCtrl',

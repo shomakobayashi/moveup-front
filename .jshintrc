@@ -13,6 +13,8 @@
   "notypeof": false,
   "globals": {
     "angular": false,
-    "jquery": false
+    "jquery": false,
+    "module": false,
+    "require": false
   }
 }

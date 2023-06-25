@@ -136,6 +136,15 @@ h1,h2,h3,h4,h5,h6 {
   background-color: #004984;
   color: white;
 }
+.tab_guide{
+  color: #e06c3c;
+  border-bottom: 2px #e06c3c solid;
+}
+.tab_guide:hover{
+  text-decoration:none;
+  background-color:#e06c3c;
+  color: white;
+}
 .tab_news{
   color: #009a4c;
   border-bottom: 2px #009a4c solid;

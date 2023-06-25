@@ -38,6 +38,8 @@ angular.module('moveupApp')
             TOP_LIST: '/api/top/',
             EVENT_LIST: '/api/event/list/{year}/{limit}/{offset}/',
             EVENT_DETAIL:'/api/event/{uuid}/',
+            GUIDE_LIST: '/api/guide/list/{year}/{limit}/{offset}/',
+            GUIDE_DETAIL:'/api/guide/{uuid}/',
             NEWS_LIST: '/api/news/list/{type}/{limit}/{offset}/',
             NEWS_DETAIL:'/api/news/detail/{uuid}/',
             SHOP_LIST: '/api/shop/list/{type}/{limit}/{offset}/',
@@ -302,6 +304,15 @@ angular.module('moveupApp')
         // 請求トップリスト
         this.getEventDetail = function(uuid, success, error) {
           httpGet(API_BASE+stringFormat(API_PATH.EVENT_DETAIL, {uuid:uuid}), success, error);
+        };
+        //請求トップリスト追記Guide
+        this.getGuideList = function(year, limit, offset, success, error) {
+          httpGet(API_BASE+stringFormat(API_PATH.GUIDE_LIST, {year:year,limit:limit,offset:offset}), success, error);
+        };
+
+        // 請求トップリスト追記Guide
+        this.getGuideDetail = function(uuid, success, error) {
+          httpGet(API_BASE+stringFormat(API_PATH.GUIDE_DETAIL, {uuid:uuid}), success, error);
         };
 
         // 請求トップリスト

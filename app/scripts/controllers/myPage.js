@@ -20,6 +20,7 @@
      $scope.all = [];
      $scope.event = [];
      $scope.shop = [];
+     $scope.guide = [];
      $scope.goods = [];
      $scope.freepaper = [];
      $scope.recruit = [];
@@ -40,10 +41,14 @@
          $scope.results = resultList;
          $scope.all = $scope.results.shopList;
          for(var index in $scope.results.shopList){
-             if($scope.results.shopList[index].type == 13){
+             if($scope.results.shopList[index].type == 13) {
                $scope.results.shopList[index].type = 'EVENT';
                $scope.results.shopList[index].status = 'EVENT';
                $scope.event.push($scope.results.shopList[index]);
+             }else  if($scope.results.shopList[index].type == 21){
+               $scope.results.shopList[index].type = 'GUIDE';
+               $scope.results.shopList[index].status = 'GUIDE';
+               $scope.guide.push($scope.results.shopList[index]);
              }else if ($scope.results.shopList[index].type == 15) {
                $scope.results.shopList[index].type = 'GOODS';
                $scope.results.shopList[index].status = 'GOODS';
@@ -135,9 +140,13 @@
          $scope.results = resultList;
          $scope.all = $scope.results.shopList;
          for(var index in $scope.results.shopList){
-             if($scope.results.shopList[index].type == 13){
+             if($scope.results.shopList[index].type == 13) {
                $scope.results.shopList[index].type = 'EVENT';
                $scope.results.shopList[index].status = 'EVENT';
+               $scope.event.push($scope.results.shopList[index]);
+             }else if($scope.results.shopList[index].type == 21){
+               $scope.results.shopList[index].type = 'GUIDE';
+               $scope.results.shopList[index].status = 'GUIDE';
                $scope.event.push($scope.results.shopList[index]);
              }else if ($scope.results.shopList[index].type == 15) {
                $scope.results.shopList[index].type = 'GOODS';
@@ -222,8 +231,10 @@
      // };
 
      $scope.goToLink = function(shopType,status,type,uuid){
-       if(type == 'EVENT'){
-         $location.path('/eventDetail/'+uuid+'/');
+       if(type == 'EVENT') {
+         $location.path('/eventDetail/' + uuid + '/');
+       }else if(type == 'GUIDE'){
+         $location.path('/guideDetail/'+uuid+'/');
        }else if (type == 'GOODS') {
          $location.path('/goodsDetail/'+uuid+'/');
        }else if(type == 'FREEPAPER'){
@@ -252,7 +263,10 @@
        $location.path('/myPage/13/1/');
        // $scope.results.shopList = $scope.event;
      }
-
+     $scope.showGuide = function(){
+       $location.path('/myPage/21/1/');
+       // $scope.results.shopList = $scope.event;
+     }
      $scope.showGoods = function(){
        $location.path('/myPage/15/1/');
      }
