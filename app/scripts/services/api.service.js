@@ -72,6 +72,7 @@ angular.module('moveupApp')
             PAYMENTCVS: '/api/goods/payment/cvs/',
             CONTACT: '/api/user/inquire/',
             NOW4: '/api/shopcoupon/list/{type}/{limit}/{offset}/',
+
             NOW4_SEARCH: '/api/shopcoupon/search/',
             NOW5: '/api/shopnowgo/list/{type}/{limit}/{offset}/',
             NOW5_SEARCH: '/api/shopnowgo/search/',

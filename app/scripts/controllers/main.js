@@ -98,7 +98,7 @@ angular.module('moveupApp')
         }else if(type == 14){
           $scope.bannerUrl = '/reportDetail/'+uuid;
         }else if(type == 15){
-		  $scope.bannerUrl = uuid;
+          $scope.bannerUrl = uuid;
 		}
         return $scope.bannerUrl;
       }
