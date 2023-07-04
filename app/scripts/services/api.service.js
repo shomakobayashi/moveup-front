@@ -16,7 +16,8 @@ angular.module('moveupApp')
         // Grunt build automatic replace end
         // var API_BASE = 'http://54.95.211.232'; // for prod2 test
       // var API_BASE = 'http://3.20.225.251';
-      var API_BASE = 'http://localhost:8081';
+      var API_BASE = 'http://54.65.145.86' +  //元http://localhost:8081
+        '';
         // すべてのAPIの定義
         var API_PATH = {
             AUTH_FACEBOOK: '/api/auth/facebook/',
