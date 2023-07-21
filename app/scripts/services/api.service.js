@@ -16,7 +16,7 @@ angular.module('moveupApp')
         // Grunt build automatic replace end
         // var API_BASE = 'http://54.95.211.232'; // for prod2 test
       // var API_BASE = 'http://3.20.225.251';
-      var API_BASE = 'http://54.65.145.86' +  //元http://localhost:8081
+      var API_BASE = 'http://54.65.145.86:8080' +  //元http://localhost:8081
         '';
         // すべてのAPIの定義
         var API_PATH = {
@@ -73,7 +73,6 @@ angular.module('moveupApp')
             PAYMENTCVS: '/api/goods/payment/cvs/',
             CONTACT: '/api/user/inquire/',
             NOW4: '/api/shopcoupon/list/{type}/{limit}/{offset}/',
-
             NOW4_SEARCH: '/api/shopcoupon/search/',
             NOW5: '/api/shopnowgo/list/{type}/{limit}/{offset}/',
             NOW5_SEARCH: '/api/shopnowgo/search/',
